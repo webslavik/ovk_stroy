@@ -1,0 +1,55 @@
+section.brands
+  padding: 60px 0
+
+
+
+.brands-carousel
+  position: relative
+  padding: 0 80px
+
+  +breakpoint(480px down)
+    padding: 0 10px
+
+  // Прописываем стили для Owl Carousel
+  .owl-nav
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+
+    .owl-prev,
+    .owl-next
+      .svg-img
+        +size(20px)
+        position: absolute
+        top: 12px
+        fill: #9f9f9f
+        +trs(250ms)
+
+        &:hover
+          fill: $primary-gold
+
+    .owl-prev
+      .svg-img
+        left: 25px
+
+    .owl-next
+      .svg-img
+        right: 25px
+
+  // Стили для наших Item
+  .brand-item
+    opacity: 0.5
+    +trs(250ms)
+
+    &:hover
+      opacity: 0.9
+
+    .svg-img
+      display: inline-block
+      width: 100%
+      max-width: 100%
+      max-height: 40px
+
+      +breakpoint(480px down)
+        max-height: 50px

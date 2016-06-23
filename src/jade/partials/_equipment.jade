@@ -1,0 +1,25 @@
+// EQUIPMENT
+
+mixin item-equipment(imageSVG, nameCompany, text)
+  .equipment-item
+    .item-head
+      img(class='bg-img' src="img/bg-eq-head.png", alt="")
+      img(class='svg-img' src="img/partners/#{imageSVG}.svg",alt="logo partners")
+    .item-text
+      h3 #{nameCompany}
+      p #{text}
+    a(href="#").button.button_grey Перейти в каталог
+
+
+section.equipment
+  .container
+    h2 Поставляемое об орудование
+    .equipment-carousel.owl-carousel
+      +item-equipment('korf', 'Korf', 'Российский производитель качественного оборудования с 13-ти летнним стажем')
+      +item-equipment('daikin', 'Daikin', 'Компания Daikin является лидером на рынке экологично безопасных систем отопления, вентиляции и кондиционирования')
+      +item-equipment('mitsubishi', 'mitsubishi', '«Мицубиси Электрик» — глобальный лидер в области электроники и электронного оборудования')
+      +item-equipment('venterra', 'venterra', 'Оборудование VENTERRA производится на заводах лучших мировых производителей с учетом сложных климатических условий нашей страны.')
+      +item-equipment('venterra', 'venterra', 'Оборудование VENTERRA производится на заводах лучших мировых производителей с учетом сложных климатических условий нашей страны.')
+
+
+  

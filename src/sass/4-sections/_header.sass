@@ -1,0 +1,74 @@
+
+header.main-header
+    min-height: 100vh
+    background-color: $primary-light
+    background:
+        image: url(../img/bg-head.jpg)
+        size: cover
+        position: center top
+
+    @media only screen and (max-height: 800px)
+        padding-bottom: 10%
+
+
+.header-content
+    padding-top: 6%
+    // background-color: tomato
+    +clearfix
+
+    @media only screen and (min-height: 900px)
+        padding-top: 16%
+
+    .content-text
+        +grid-col(6)
+
+        h1
+            line-height: 1.25
+            margin: 0
+
+            +breakpoint(992px down)
+                font-size: em(38px)
+
+            +breakpoint(medium down)
+                font-size: em(28px)
+
+        .list
+            margin-top: em(35px)
+
+        > .button
+            margin-top: em(30)
+
+    .content-img
+        +grid-col(6)
+
+
+        > img
+            max-width: 100%
+            margin-top: em(10px)
+
+            +breakpoint(xlarge)
+                width: 660px
+                max-width: em(660)
+
+    .mouse-wrap
+        +grid-col(12)
+        text-align: center
+
+        .mouse-icon
+            margin-top: rem(45)
+            border-color: lighten($primary-dark_text, 10%)
+            cursor: pointer
+
+            .wheel
+                background: lighten($primary-dark_text, 10%)
+
+    +breakpoint(800px down)
+        padding-top: 6%
+
+        .content-text
+            +grid-col(100%)
+            text-align: center
+
+        .content-img
+            img
+                display: none

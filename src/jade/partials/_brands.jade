@@ -1,0 +1,24 @@
+// BRANDS
+
+mixin brands(image)
+  .brand-item
+    a(href="#")
+      img(class='svg-img' src="img/partners/#{image}.svg", alt="")
+
+section.brands
+
+  .container
+    h2 Партнеры компании
+    
+    //- ВНИМАНИЕ!!! Пришлось добавить класс .owl-carousel, т.к. он не 
+    //- подставлялся скриптом! Что не позволяло корректно работать карусели.
+    //- 
+    .brands-carousel.owl-carousel
+      +brands('daikin')
+      +brands('amalva')
+      +brands('arktos')
+      +brands('bewfort')
+      +brands('general')
+      +brands('korf')
+      +brands('lg')
+      +brands('mitsubishi')

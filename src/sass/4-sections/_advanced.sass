@@ -1,0 +1,39 @@
+section.advanced
+    background-color: $primary-dark
+    color: #fff
+    padding: 50px 0
+
+.advanced-item
+    +grid-col(3)
+    font-size: em(14)
+    font-family: "Open Sans", sans-serif
+    font-weight: 300
+    color: #c0cdda
+    line-height: em(20)
+
+    h3
+        margin: 0
+        color: #dde9f3
+        text-transform: uppercase
+        font-size: em(20)
+
+        > span
+            color: $primary-gold
+            font-family: 'Exo 2', sans-serif
+            font-weight: 700
+            font-size: em(32)
+
+    p
+        margin-top: rem(9px)
+
+    +breakpoint(medium down)
+        +grid-col(5)
+        +grid-col-off(1)
+
+        h3
+            margin-top: rem(20)
+
+    +breakpoint(small down)
+        +grid-col(100%)
+        +grid-col-off(0)
+        text-align: center

@@ -1,0 +1,133 @@
+.menu-line
+  padding-top: rem(50)
+  position: relative
+  +grid-row()
+
+
+  // ЛОГОТИП
+  //----------------------------------------------
+  .logo
+    +grid-col(2)
+
+    > .svg-img
+      position: relative
+      top: rem(-25px)
+      +size(100px)
+      fill: $primary-dark
+
+  // ТЕЛЕФОН
+  //----------------------------------------------
+  .phone
+    text-align: right
+    +grid-col(3)
+    +grid-column-position(7)
+
+    .img
+      > .svg-img
+        position: relative
+        right: 2px
+        top: 3px
+        +size(18px)
+        fill: $primary-dark
+
+    > .num
+      font-family: "Exo 2"
+      font-weight: 700
+      font-size: em(20px)
+      color: $primary-dark
+
+    > .text
+      display: block
+      font-size: em(13)
+      color: lighten($primary-dark_text, 10%)
+
+      span
+        border-bottom: 1px dashed lighten($primary-dark_text, 15%)
+        cursor: pointer
+        +trs(.4s)
+
+        &:hover
+          border-bottom: 1px dashed transparent
+
+
+  // МЕНЮ
+  //----------------------------------------------
+  .menu
+    +grid-col(7)
+    +grid-column-position(-3)
+
+    ul
+      margin-top: rem(15px)
+      list-style-type: none
+      font-size: em(13)
+
+      li
+        display: inline-block
+        margin: 0 em(20)
+
+        .active
+          color: darken($primary-dark, 10%)
+          text-decoration: underline
+
+        a
+          color: lighten($primary-dark, 20%)
+          +trs(0.4s)
+
+          &:hover
+            text-decoration: underline
+            color: darken($primary-dark, 10%)
+
+  // СКРЫВАЕМ ГАМБУРГЕР НА ВЫСОКОМ РАЗРЕШЕНИИ
+  //----------------------------------------------
+  .toggle-wrap
+    display: none
+
+  // МЕДИА ЗАПРОСЫ
+  //----------------------------------------------
+
+  // ДЛЯ МЕНЮ В HEADER
+  &-header
+    +breakpoint(large down)
+      .phone
+        +grid-column(5)
+        +grid-column-position(4)
+
+      .toggle-wrap
+        display: inline-block
+        position: absolute
+        top: rem(50)
+        right: em(40)
+
+      .menu
+        position: relative
+        top: -40px
+        display: none
+        text-align: center
+        background-color: $primary-dark
+        +grid-col(12)
+        +grid-column-position(0)
+
+        ul
+          li
+            display: block
+            padding: rem(12px) 0
+            font-size: em(18px)
+
+            .active
+              color: $primary-gold
+
+            a
+              &:hover
+                color: #fff
+
+    +breakpoint(800px down)
+      .logo, .phone
+        +grid-col(12)
+        text-align: center
+        +grid-column-position(0)
+
+      .phone
+        margin-top: rem(-25px)
+
+      .menu
+        top: rem(10)

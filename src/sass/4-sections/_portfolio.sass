@@ -1,0 +1,147 @@
+section.portfolio
+  background-color: $primary-dark
+  padding-top: 80px
+  border-bottom: 15px solid darken($primary-dark, 4%)
+  +grid-row(null, null, 100%, true, 0)
+
+  > h2
+    color: #fff
+
+
+.portfolio-item
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  +grid-col(3, 0)
+
+  // отменяем последнему блоку float:right
+  &:nth-of-type(8)
+    +grid-col-end()
+
+  +breakpoint(large only)
+    +grid-col(4, 0)
+
+  +breakpoint(medium only)
+    +grid-col(6, 0)
+
+  +breakpoint(768px down)
+    +grid-col(12, 0)
+
+  // Изображение обрезается по высоте и если не использовать transform
+  // внизу будет маленькая полоска.
+  img
+    transform: scale(1.030)
+
+  &:hover
+
+    img
+      transform: scale(1.1)
+
+    .thumb-overlay
+      transform: scale(0.95)
+
+  img
+    +trs(300ms)
+
+  .thumb-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(255,255,255,.8)
+    +trs(300ms)
+
+    .portfolio-magnifier
+      display: block
+      position: absolute
+      top: calc(47% - 32px)
+      left: calc(50% - 32px)
+      +size(32px)
+      fill: lighten($primary-dark, 30%)
+
+    h4
+      font-size: em(16)
+      text-transform: uppercase
+      color: lighten($primary-dark, 10%)
+      position: absolute
+      top: 47%
+      text-align: center
+      +grid-col(100%)
+
+
+.popup-wrap
+  +grid-row(null, null, 100%, true, 0)
+
+.portfolio-popup
+  position: relative
+  +grid-row
+  +trs(250)
+  background-color: #fff
+
+  > img
+    display: block
+    margin: 0 auto 50px
+    padding-top: 50px
+
+  > h2
+    margin-bottom: 50px
+    text-align: center
+    line-height: 1.1
+    +grid-col(100%)
+
+    +breakpoint(768px down)
+      font-size: em(28)
+
+  .popup-content
+    padding-bottom: 40px
+    +grid-row()
+
+
+    // что бы блок не прижимался к краю родителя
+    //-----------------
+    .work
+      +grid-col-pos(-1)
+
+      +breakpoint(1195px down)
+        +grid-col-pos(0)
+
+    //--------------
+    .address,
+    .work
+      +grid-col(6)
+
+      span
+        text-align: right
+        color: $primary-gold
+        font-weight: bold
+        +grid-col(4)
+
+
+        svg
+          position: relative
+          top: 2px
+          +size(18px)
+          fill: $primary-gold
+
+      p
+        margin: 0
+        +grid-col(8, 0)
+        // +grid-col-off(10%)
+
+      // Адаптивность на меньших экранах
+      //-----------------------------------------------
+      +breakpoint(920px down)
+        +grid-col(12)
+        +grid-col-collapse()
+
+        &:nth-child(1)
+          margin-bottom: 30px
+
+        span
+          font-size: em(15)
+          text-align: center
+          +grid-col(4, 0)
+
+        p
+          +grid-col(8)

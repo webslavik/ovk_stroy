@@ -1,0 +1,88 @@
+section.equipment
+  padding: 80px 0
+
+
+// ITEM
+//----------------------------------------
+
+// настройка owl-carousel под себя
+.equipment-carousel
+
+  .owl-item
+    padding: 0 15px
+
+  > .owl-dots
+    text-align: center
+    .owl-dot
+      display: inline-block
+      +size(14px)
+      margin: 25px 4px 0
+      background-color: #ccc
+      border-radius: 50%
+      +trs(200ms)
+
+      &.active
+        background-color: $primary-gold
+
+
+// Наш ITEM
+//-------------------------------------
+.equipment-item
+  padding-bottom: 30px
+  background-color: #f8f8f8
+  box-shadow: #ccc 0 0 0 5px inset
+  text-align: center
+  +trs(250ms)
+  +grid-col(12, 0)
+
+  // ПРИ НАВЕДЕНИИ НА ITEM
+  //----------------------------------------
+  &:hover
+    background-color: #eee
+    box-shadow: $primary-gold 0 0 0 5px inset
+
+    .item-head
+      .svg-img
+        path
+          fill: $primary-gold
+
+    .item-text
+      h3
+        color: $primary-gold
+
+    .button_grey
+      color: #fff
+      background-color: lighten($primary-gold, 3%)
+      border: 1px solid $primary-gold
+      box-shadow: 0 3px 0 darken($primary-gold, 10%)
+
+  // СТИЛИ ДЛЯ ITEM
+  //----------------------------------------
+  .item-head
+    position: relative
+    .svg-img
+      width: 100%
+      max-width: 100%
+      max-height: 50px
+      position: absolute
+      top: 30px
+      left: 0
+
+      path
+        fill: #f8f8f8
+        +trs(250ms)
+
+  .item-text
+    padding: 0 20px
+    h3
+      margin-top: 35px
+      font-family: 'Open Sans', sans-serif
+      font-weight: 700
+      text-transform: uppercase
+      +trs(250ms)
+
+    p
+      font-size: em(13)
+
+  > .button.button_grey
+    margin-top: 10px

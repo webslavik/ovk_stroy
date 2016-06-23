@@ -1,0 +1,83 @@
+section.testimonials
+  background-color: $primary-light
+  padding: 80px 0
+
+  +breakpoint(768px down)
+    padding-bottom: 30px
+
+
+// TESTIMONIAL ITEM
+//-------------------------------------
+.testimonial-item
+  text-align: center
+  +grid-col(4)
+
+  +breakpoint(768px down)
+    +grid-col(12)
+    margin-bottom: 50px
+
+    // &:nth-last-of-type
+    //   margin-bottom: 0
+
+
+  // Стили при наведении
+  //-------------------------------------
+  &:hover
+    .foto
+      border: 5px solid $primary-gold
+
+    .testimonial-title
+      > h3
+        color: $primary-gold
+
+    .testimonial-descr
+      border-bottom: 5px solid $primary-gold
+
+
+  // Стили Item
+  //-------------------------------------
+  > .foto
+    margin: 0 auto 40px
+    border: 5px solid #fff
+    border-radius: 50%
+    box-shadow: rgba(0,0,0,.15) 0 0 5px
+    +size(125px)
+    +trs(300ms)
+
+    img
+      border-radius: 50%
+
+  .testimonial-title
+    > h3
+      font-size: em(16)
+      margin-bottom: 5px
+      +trs(300ms)
+
+    > p
+      margin-top: 0
+      color: #666
+      font-size: em(14)
+
+  .testimonial-descr
+    position: relative
+    margin-top: 50px
+    padding: 30px 25px
+    background-color: $primary-dark
+    border-bottom: 5px solid $primary-dark
+    border-radius: 2px
+    +trs(300ms)
+
+    &::before
+      content: ''
+      position: absolute
+      top: -15px
+      transform: translateX(-16px)
+      +triangle(32px, $primary-dark, up)
+
+    > h3
+      font-size: em(16)
+      color: #fff
+
+    > p
+      font-size: em(14)
+      color: #ccc

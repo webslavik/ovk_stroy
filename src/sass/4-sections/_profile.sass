@@ -1,0 +1,121 @@
+section.profile
+  background-color: $primary-light
+  padding: 80px 0
+
+.profile-gallery
+  +grid-col(6)
+  +breakpoint(768px down)
+    +grid-col(100%)
+
+  // скрываем дочерние ссылки на всякий случай, хоть они и не видны
+  // > a
+  //   display: none
+  //   &:first-child
+  //     display: block
+
+  .gallery-tizer
+    display: inline-block
+    position: relative
+    width: 100%
+    min-height: 360px
+    background:
+      size: cover
+      position: center
+    border: 7px solid $primary-gold
+
+
+    &:hover
+      &:before
+        opacity: 0.8
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #475267
+      opacity: 0.6
+      +trs(400ms)
+
+    > .triangle
+      +triangle(100px, $primary-gold, up-right)
+      position: absolute
+      top: 0
+      right: 0
+
+    > .image
+      position: absolute
+      top: 14px
+      right: 13px
+      +size(28px)
+      fill: #fff
+
+
+    .magnify,
+    span
+      position: absolute
+      top: 45%
+      // Полезная штука!!!
+      left: calc(50% - 32px)
+      transform: translateY(-50%)
+
+    .magnify
+      +size(64px)
+      fill: #cac8c8
+
+    span
+      margin-top: 55px
+      font-family: "Open Sans", sans-serif
+      font-weight: 300
+      left: calc(50% - 50px)
+      font-size: em(28)
+      color: #fff
+
+.profile-sertificate
+  +grid-col(6)
+
+  +breakpoint(768px down)
+    +grid-col(100%)
+    text-align: center
+
+  > h2
+    line-height: em(19)
+    text-align: left
+    margin-bottom: 0
+    +breakpoint(768 down)
+      text-align: center
+
+  > p
+    color: #777
+
+  > .list
+    margin-top: rem(30)
+
+  .sectificate-wrap > a
+    display: none
+    &:first-child
+      display: block
+
+    +breakpoint(medium down)
+      +grid-col(100%)
+
+  > .button
+    +grid-col(5)
+    margin-top: rem(25)
+
+    &+.sectificate-wrap .button_gold
+      margin-top: rem(25)
+      +grid-col(6)
+      float: right
+
+  +breakpoint(medium down)
+    .button
+      +grid-col(100%)
+
+      &+.sectificate-wrap .button_gold
+        +grid-col(100%)
+
+    > h2
+      margin-top: rem(20px)

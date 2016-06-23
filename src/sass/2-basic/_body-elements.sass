@@ -1,0 +1,94 @@
+
+*
+    box-sizing: border-box
+
+html
+    font-size: 100%
+
+body
+    font-size: em(16)
+    min-width: 320px
+    position: relative
+    line-height: 1.5
+    font-family: 'Open Sans', sans-serif
+    background-color: #fff
+    color: #111
+    -webkit-font-smoothing: antialiased
+    -webkit-text-size-adjust: 100%
+
+img
+    max-width: 100%
+
+ul
+  padding-left: 0
+
+// links
+a
+    text-decoration: none
+    outline: 0
+    color: #0074D9
+
+    &:hover,
+    &:focus
+        color: $gray
+
+*
+  ::placeholder
+    color: #666
+    opacity: 1
+
+*
+  :active,
+  :focus
+    outline: none
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+// selection colors
+::selection
+  background: #FFF498
+
+::-moz-selection
+  background: #FFF498
+
+img::selection
+  background: transparent
+
+img::-moz-selection
+  background: transparent
+
+body
+  -webkit-tap-highlight-color: #FFF498
+
+
+
+// User elements
+h1, h2, h3, h4, h5, h6
+    font-family: 'Open Sans', sans-serif
+    font-weight: 300
+
+h1
+    font-size: em(42)
+
+h2
+    font-size: em(34)
+    margin: 0 0 60px
+    text-align: center
+
+
+    +breakpoint(768px down)
+      font-size: em(30)
+
+h3, h4
+    font-family: 'Open Sans Semibold', sans-serif
+    font-size: em(18)
+    text-transform: uppercase
+
+h4
+    font-size: em(14)

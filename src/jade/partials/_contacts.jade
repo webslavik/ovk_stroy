@@ -1,0 +1,45 @@
+// CONTACTS
+
+section.contacts
+
+  .container
+    h2 Контакты
+    
+    .contact-wrap
+      .contact-info
+        .contact-text
+          p.address
+            img(class='svg-img' src="img/icon/location.svg", alt="")
+            strong Адресс: 
+            | Москва, ул. Пантелеева 15, оф. 3-03     
+          p.phone
+            img(class='svg-img' src="img/icon/smartphone.svg", alt="")
+            strong Телефон: 
+            | 8 (495) 970-4490 
+        <iframe class='contact-map' src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d130895.978285452!2d145.00476762775227!3d-37.761763762158864!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1460693333556" frameborder="0" style="border:0" allowfullscreen></iframe>
+          
+          
+      .wrap-form    
+        form(action="").main-form
+          .form-head
+            h3 Оставить заявку
+            p Оставьте заявку и мы свяжимся с вами в течении 20 мин.
+            
+          label 
+            span Ваше имя:
+            input(type="text" name='Имя' placeholder='Ваше имя...')
+            
+          label 
+            span Ваш телефон:
+            input(type="text" name='Телефон' placeholder='Ваш телефон...')
+            
+          label 
+            span Услуга:
+            select(name="Услуга")
+              option(value="Монтаж") Монтаж
+              option(value="Проектирование") Проектирование
+              option(value="Оборудование") Оборудование
+              
+          button.button.button_gold Отправить
+      
+    

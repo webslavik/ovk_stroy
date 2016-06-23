@@ -1,0 +1,34 @@
+// TESTIMONIALS
+
+mixin testim-item(image, name, company, reviewTitle, reviewText)
+  .testimonial-item
+    .foto
+      img(src="img/team/#{image}.png", alt="testimonial")
+    .testimonial-title
+      h3 #{name}
+      p #{company}
+    .testimonial-descr
+      h3 #{reviewTitle}
+      p #{reviewText}
+
+section.testimonials
+
+  .container
+    h2 Отзывы клиентов о нашей работе
+    
+    +testim-item('manager_2', 'Василиса Андреевна', 'Sony Corporation', 
+      'Очень замечательна компания',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.'
+    )
+    
+    +testim-item('manager_3', 'Сергей Андреевич', 'Sony Corporation', 
+      'Очень замечательна компания',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui.'
+    )
+    
+    +testim-item('manager_1', 'Павел Константинович', 'Sony Corporation', 
+      'Очень замечательна компания',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    )
+    
+    

@@ -1,0 +1,50 @@
+// use globall
+body
+  height: 2000px
+
+
+.container
+    +grid-row()
+
+
+// СКРЫВАТЬ ОБЪЕКТЫ НА СРЕДНЕМ РАЗРЕШЕНИИ
+//---------------------------------------------------
+span.middle-hide
+  +breakpoint(medium down)
+    display: none
+
+  +breakpoint(768px down)
+    display: inline-block
+
+.hidden
+  display: none
+
+
+// LIST
+.list
+    .text-wrap
+        display: inline-block
+        text-align: left
+
+        div
+            margin-bottom: 5px
+
+            > svg
+                position: relative
+                top: 2px
+                +size(16px)
+                fill: $primary-dark
+
+                &.plus
+                  fill: #b1b8be
+
+            span
+                margin-left: 8px
+                font-family: "Open Sans SemiBold", sans-serif
+                font-weight: 600
+                font-size: em(17px)
+                text-transform: uppercase
+                color: $primary-dark
+
+                +breakpoint(medium down)
+                    font-size: em(15px)

@@ -1,0 +1,58 @@
+section.service
+  padding: 80px 0
+
+  h2
+    margin-bottom: 0
+
+.service-item
+  +grid-col(4)
+  text-align: center
+
+  &:hover
+    .svg-img
+      fill: $primary-gold
+
+    h3:after
+      width: 40%
+      background-color: $primary-gold
+
+    .button_grey
+      color: #fff
+      background-color: lighten($primary-gold, 3%)
+      border: 1px solid $primary-gold
+      box-shadow: 0 3px 0 darken($primary-gold, 10%)
+
+
+  > .svg-img
+    margin-top: 60px
+    +size(75px)
+    +trs(300ms)
+
+  > h3
+    margin-top: 50px
+
+    &::after
+      content: ''
+      display: block
+      width: 15%
+      margin: 15px auto 0
+      height: 1px
+      background-color: #999
+      +trs(400ms)
+
+  > p
+    height: 88px
+    margin: 40px 0
+    padding: 0 10px
+    font-size: em(14)
+    color: #666
+
+  +breakpoint(992px down)
+    .button
+      margin-top: 30px
+
+  +breakpoint(768 down)
+    +grid-col(100%)
+
+    p
+      height: 60px

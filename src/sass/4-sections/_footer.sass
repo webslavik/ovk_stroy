@@ -1,0 +1,90 @@
+footer.main-footer
+  background-color: darken($primary-dark, 10%)
+  padding-bottom: 30px
+
+
+// MENU FOOTER
+//-----------------------------------------
+.menu-line-footer
+  > .logo
+    .svg-img
+      fill: lighten($primary-dark, 40%)
+
+  > .phone
+    .img,
+    .num,
+    .text
+      color: lighten($primary-dark, 40%)
+
+    .img
+      .svg-img
+        fill: lighten($primary-dark, 40%)
+
+    .text
+      span
+        color: lighten($primary-dark, 40%)
+        border-bottom: 1px dashed darken($primary-light, 40%)
+
+        &:hover
+          border-bottom: 1px dashed darken($primary-light, 20%)
+
+  > .menu
+    text-align: center
+    ul
+      li
+        a
+          color: lighten($primary-dark_text, 30%)
+
+          &:hover
+            text-decoration: underline
+            color: lighten($primary-dark_text, 50%)
+
+  .copy
+    margin-top: -30px
+    font-size: em(13)
+    color: lighten($primary-dark_text, 30%)
+    +grid-col(100%)
+
+
+  // МЕДИА ЗАПРОСЫ
+  //-----------------------------------------
+  +breakpoint(992px down)
+    .menu,
+    .phone
+      text-align: center
+      +grid-col-pos(0)
+      // +grid-col(100%)
+
+    .logo
+      text-align: center
+      +grid-col(6)
+      .svg-img
+    .phone
+      +grid-col(6)
+      text-align: center
+
+    .menu
+      margin-top: -20px
+      +grid-col(100%)
+
+    .copy
+      margin-top: 20px
+      text-align: center
+
+  +breakpoint(580px down)
+    .logo,
+    .phone
+      +grid-col(100%)
+
+    .phone
+      margin: -30px auto 20px
+
+    .menu
+      margin-top: 0
+
+      ul
+        li
+          display: block
+          padding: 10px 15px
+          a
+            font-size: em(20)

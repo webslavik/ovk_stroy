@@ -1,0 +1,60 @@
+// PRIMARY BUTTON
+//---------------------------------------
+.button
+  display: inline-block
+  padding: em(15) rem(45)
+  font-size: em(14px)
+  background-color: $primary-green
+  color: #fff
+  border-radius: 3px
+  border: 1px solid $primary-green
+  box-shadow: 0 3px 0 darken($primary-green, 10%)
+  text-align: center
+  text-transform: uppercase
+  letter-spacing: 2px
+  +trs(250ms)
+
+  &:hover, &:focus
+    color: #fff
+
+  &:hover
+    background-color: lighten($primary-green, 3%)
+
+  &:active
+    background-color: darken($primary-green, 10%)
+
+    // GOLD BUTTON
+    //---------------------------------------
+  &.button_gold
+    font-family: 'Open Sans Semibold', sans-serif
+    font-weight: 600
+    color: $primary-gold
+    background-color: transparent
+    border: 1px solid $primary-gold
+    box-shadow: 0 3px 0 darken($primary-gold, 10%)
+
+    &:hover, &:focus
+      color: #fff
+      background-color: lighten($primary-gold, 3%)
+
+    &:active
+      border-color: darken($primary-gold, 10%)
+      background-color: darken($primary-gold, 10%)
+
+
+  // GREY BUTTON
+  //---------------------------------------
+  &.button_grey
+    font-size: em(12)
+    padding: em(13) rem(30)
+    background-color: #e8e8e8
+    color: #555
+    border-color: #e8e8e8
+    box-shadow: 0 3px 0 darken(#e8e8e8, 12%)
+
+    // Возможно лишнее
+    // &:hover, &:focus
+    //   color: #fff
+    //   background-color: lighten($primary-gold, 3%)
+    //   border: 1px solid $primary-gold
+    //   box-shadow: 0 3px 0 darken($primary-gold, 10%)
